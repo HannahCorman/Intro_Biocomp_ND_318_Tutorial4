@@ -1,6 +1,6 @@
 #Challenge in Exercise4 using GitHub
 
-cat wages.csv | sed 's/,/ /g' | sort -k 1,1 -k 2,2n -s | cut -d " " -f 1,2
+cat wages.csv | sed 's/,/ /g' | sort -k 1,1 -k 2,2n -s | cut -d " " -f 1,2 >> Gender_Experience.txt
 echo "Highest Earner"
 cat wages.csv | grep -v "gender" | tr "," " " | sort -n -k 4 | tail -n 1 | cut -d " " -f 1,2,4 
 echo "Lowest Earner"
