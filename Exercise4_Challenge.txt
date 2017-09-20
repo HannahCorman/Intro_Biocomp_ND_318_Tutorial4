@@ -15,3 +15,4 @@ echo "Difference in lowest wage between high school and college"
 VAL1=$(cat wages.csv | sed 's/,/ /g' | cut -d " " -f 3,4 | grep "12 " | sort -n -k 2 | head -n 1 | cut -d " " -f 2)                                                                                                                                 
 VAL2=$(cat wages.csv | sed 's/,/ /g' | cut -d " " -f 3,4 | grep "16 " | sort -n -k 2 | head -n 1 | cut -d " " -f 2)
 echo "$VAL2-$VAL1" | bc
+echo "Done!"
